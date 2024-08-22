@@ -6,5 +6,10 @@ def check_data_distribution(data_dir):
         path = os.path.join(data_dir, class_dir)
         print(f'{class_dir}: {len(os.listdir(path))} images')
 
-data_dir = r'C:\Users\huy\Desktop\Cuong-Classification\train'
+current_dir = os.getcwd()
+print("current dir", current_dir)
+
+data_dir = os.path.join(current_dir, 'train')
+print("data_dir", data_dir)
+
 check_data_distribution(data_dir)
